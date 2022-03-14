@@ -44,7 +44,7 @@ public class ApiControllerBaseTests
             typeof(ApiControllerBase).Should()
                     .BeDecoratedWith<SwaggerCustomResponseAttribute>(p =>
                         p.StatusCode.Equals(code) && p.Type.IsAssignableTo(typeof(StandardErrorResponse)), 
-                        $"missing ProducesCustomResponseType(statusCode: {code}, type: typeof(StandardErrorResponse))");
+                        $"missing SwaggerCustomResponseAttribute(statusCode: {code}, type: typeof(StandardErrorResponse))");
         }
     }
 }
