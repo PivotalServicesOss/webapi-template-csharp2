@@ -1,5 +1,3 @@
-using Swashbuckle.AspNetCore.Annotations;
-
 namespace PivotalServices.WebApiTemplate.CSharp2.Shared.Documentation;
 
 /// <summary>

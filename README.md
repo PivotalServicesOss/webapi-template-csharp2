@@ -13,6 +13,7 @@ This is an opinionated ASP.NET Web API template for the dotnet new command. This
 - In addition to xml documentation, APIs are well documented using [Swagger Annotations](https://github.com/domaindrivendev/Swashbuckle.AspNetCore#swashbuckleaspnetcoreannotations), a testable way of documentation, rather than xml based documentation.
 - Uses Uri based API versioning, learn more [here](https://code-maze.com/aspnetcore-api-versioning/)
 - Opinionated usage of `Request` and `Response` headers. Optional to modify as needed. Includes usage of `Correlation` headers 
+- Standardized error responses, using [ProblemDetails](https://datatracker.ietf.org/doc/html/rfc7807)
 - Usage of [High-performance logging in .NET](https://docs.microsoft.com/en-us/dotnet/core/extensions/high-performance-logging) 
 - Uses [Fluent validation](https://fluentvalidation.net/), instead of ASP.NET framework model validation
 - Uses [Fluent Assertions](https://fluentassertions.com/), [XUnit](https://xunit.net/), [Moq](https://github.com/moq/moq) and [Microsoft Testing SDK](https://www.nuget.org/packages/Microsoft.NET.Test.SDK) for unit and integration tests

@@ -1,7 +1,7 @@
 ﻿public class SwaggerSchemaExampleAttributeTests
 {
     [Fact]
-    public void SwaggerSchemaExampleAttribute_ShouldBeOfTypeProducesResponseTypeAttribute()
+    public void SwaggerSchemaExampleAttribute_ShouldBeOfTypeAttribute()
     {
         //Assert
         typeof(SwaggerSchemaExampleAttribute).Should().BeDerivedFrom(typeof(Attribute));

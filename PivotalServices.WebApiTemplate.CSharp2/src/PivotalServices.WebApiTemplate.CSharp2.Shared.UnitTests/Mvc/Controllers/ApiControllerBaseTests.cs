@@ -37,7 +37,7 @@ public class ApiControllerBaseTests
     }
 
     [Fact]
-    public void ChargeController_Should_Apply_ProducesCustomResponseType_Decorators()
+    public void ApiControllerBase_Should_Apply_ProducesCustomResponseType_Decorators()
     {
         foreach (var code in new[] { 400, 401, 500 })
         {
