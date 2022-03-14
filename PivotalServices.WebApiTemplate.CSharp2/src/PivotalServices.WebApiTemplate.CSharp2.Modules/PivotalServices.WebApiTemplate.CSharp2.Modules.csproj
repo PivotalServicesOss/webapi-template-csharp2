@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<Import Project="..\..\versions.props" />
+
+  <PropertyGroup>
+    <TargetFramework>$(TargetFrameworkApp)</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(MSBuildThisFileName).xml</DocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PivotalServices.WebApiTemplate.CSharp2.Shared\PivotalServices.WebApiTemplate.CSharp2.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

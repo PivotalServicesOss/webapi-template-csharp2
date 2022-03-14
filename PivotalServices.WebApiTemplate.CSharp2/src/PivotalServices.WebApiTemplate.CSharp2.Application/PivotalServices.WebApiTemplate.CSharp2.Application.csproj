@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+<Import Project="..\..\versions.props" />
+
+  <PropertyGroup>
+    <TargetFramework>$(TargetFrameworkApp)</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>preview</LangVersion>
+    <UserSecretsId>4a37f6be-4d90-431e-a0d3-798a1012cc87</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+     <InternalsVisibleTo Include="PivotalServices.WebApiTemplate.CSharp2.Application.IntegrationTests" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(MSBuildThisFileName).xml</DocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PivotalServices.WebApiTemplate.CSharp2.Shared\PivotalServices.WebApiTemplate.CSharp2.Shared.csproj" />
+    <ProjectReference Include="..\PivotalServices.WebApiTemplate.CSharp2.Modules\PivotalServices.WebApiTemplate.CSharp2.Modules.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="appsettings.json" CopyToPublishDirectory="Always" CopyToOutputDirectory="Always" />
+    <None Include="appsettings.Development.json" CopyToPublishDirectory="Always" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+</Project>

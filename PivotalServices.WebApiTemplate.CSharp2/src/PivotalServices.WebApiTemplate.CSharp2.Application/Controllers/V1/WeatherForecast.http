@@ -1,0 +1,46 @@
+
+@URL=https://localhost:7258
+
+### Success
+GET {{URL}}/v1/WeatherForecast/GetAll HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+CorrelationId: 35714f5b-35d7-45d9-85d8-3b241ab54669
+RequestDateTimeUtc: 13:14:15Z
+
+{
+  
+}
+
+###
+GET {{URL}}/v1/WeatherForecast/GetByZipCode?ZipCode=12345 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+CorrelationId: a20e7626-1bd6-4d6b-bd12-435692128d7e
+RequestDateTimeUtc: 2999-12-31T00:00:00.000Z
+
+{
+  
+}
+
+### Failed
+GET {{URL}}/v1/WeatherForecast/GetAll HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+CorrelationId: a20e7626-1bd6-4d6b
+RequestDateTimeUtc: 2999-12-31
+
+{
+  
+}
+
+### 
+GET {{URL}}/v1/WeatherForecast/GetByZipCode?ZipCode=12345 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+CorrelationId: a20e7626-1bd6-4d6b-bd12-435692128d7e
+RequestDateTimeUtc: 2999-12-31T00:00:00.000
+
+{
+  
+}

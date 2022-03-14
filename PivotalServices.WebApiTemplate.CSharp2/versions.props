@@ -1,0 +1,29 @@
+<Project>
+  <PropertyGroup>
+    <AspNetCoreHealthChecksVersion>6.0.4</AspNetCoreHealthChecksVersion>
+    <AutofacVersion>6.3.0</AutofacVersion>
+    <AutofacExtensionsVersion>7.2.0</AutofacExtensionsVersion>
+    <CovletVersion>3.1.2</CovletVersion>
+
+    <FluentAssertionVersion>6.5.1</FluentAssertionVersion>
+    <FluentValidationVersion>10.3.6</FluentValidationVersion>
+
+    <MediatRVersion>10.0.1</MediatRVersion>
+    <MicrosoftTestSdkVersion>16.11.0</MicrosoftTestSdkVersion>
+    <MicrosoftAspNetCoreVersion>6.0.0</MicrosoftAspNetCoreVersion>
+    <MicrosoftAspNetCoreMvcVersioningVersion>5.0.0</MicrosoftAspNetCoreMvcVersioningVersion>
+    <MoqVersion>4.17.2</MoqVersion>
+
+    <ObjectsComparerVersion>1.4.1</ObjectsComparerVersion>
+
+    <SeriligAspNetCoreVersion>5.0.0</SeriligAspNetCoreVersion>
+    <SteeltoeVersion>3.1.3</SteeltoeVersion>
+    <SwashbuckleVersion>6.3.0</SwashbuckleVersion>
+
+    <TargetFrameworkApp>net6.0</TargetFrameworkApp>
+
+    <XunitVersion>2.4.1</XunitVersion>
+    <XunitRunnerVersion>2.4.3</XunitRunnerVersion>
+    <XunitLoggingVersion>0.2.0</XunitLoggingVersion>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<Import Project="..\..\versions.props" />
+
+  <PropertyGroup>
+    <TargetFramework>$(TargetFrameworkApp)</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftTestSdkVersion)" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="$(MicrosoftAspNetCoreVersion)" />
+    <PackageReference Include="FluentAssertions" Version="$(FluentAssertionVersion)" />
+    <PackageReference Include="xunit" Version="$(XunitVersion)" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="$(XunitRunnerVersion)">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="MartinCostello.Logging.XUnit" Version="$(XunitLoggingVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PivotalServices.WebApiTemplate.CSharp2.Application\PivotalServices.WebApiTemplate.CSharp2.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="appSettings.Integration.json" CopyToPublishDirectory="Always" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>psake</id>
+    <version>4.9.0</version>
+    <authors>James Kovacs</authors>
+    <owners>James Kovacs</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://raw.githubusercontent.com/psake/psake/master/license.txt</licenseUrl>
+    <projectUrl>https://github.com/psake/psake</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/psake/graphics/master/png/psake-single-icon-teal-bg-256x256.png</iconUrl>
+    <description>psake is a build automation tool written in PowerShell.</description>
+    <releaseNotes>https://raw.githubusercontent.com/psake/psake/master/CHANGELOG.md</releaseNotes>
+    <copyright>Copyright (c) 2010-18 James Kovacs, Damian Hickey, Brandon Olin, and Contributors</copyright>
+    <tags>Build Task PSModule PSIncludes_Function PSFunction_Invoke-psake PSFunction_Invoke-Task PSFunction_Get-PSakeScriptTasks PSFunction_Task PSFunction_Properties PSFunction_Include PSFunction_FormatTaskName PSFunction_TaskSetup PSFunction_TaskTearDown PSFunction_Framework PSFunction_Assert PSFunction_Exec PSCommand_Invoke-psake PSCommand_Invoke-Task PSCommand_Get-PSakeScriptTasks PSCommand_Task PSCommand_Properties PSCommand_Include PSCommand_FormatTaskName PSCommand_TaskSetup PSCommand_TaskTearDown PSCommand_Framework PSCommand_Assert PSCommand_Exec</tags>
+  </metadata>
+</package>

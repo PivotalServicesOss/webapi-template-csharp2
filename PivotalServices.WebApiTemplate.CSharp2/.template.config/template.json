@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "ajaganathan",
+  "classifications": [ "WebAPI", "Web", "Modular"],
+  "identity": "PivotalServices.WebApiTemplate.CSharp2",
+  "name": "Pivotal WebAPI Template - v2",
+  "tags": {
+      "language": "C#",
+      "type": "solution"
+  },
+  "sourceName": "PivotalServices.WebApiTemplate.CSharp2",
+  "preferNameDirectory": true,
+  "shortName": "pvtlwebapi2"
+}
+
