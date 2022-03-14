@@ -11,6 +11,7 @@ This is an opinionated ASP.NET Web API template for the dotnet new command. This
 - Structured logging using [Serilog](https://serilog.net/), custom injection of additional properties for better diagnostics.
 - A [Modular Monolith](https://modularmonolith.net/) to start with..
 - In addition to xml documentation, APIs are well documented using [Swagger Annotations](https://github.com/domaindrivendev/Swashbuckle.AspNetCore#swashbuckleaspnetcoreannotations), a testable way of documentation, rather than xml based documentation.
+- Uses Uri based API versioning, learn more [here](https://code-maze.com/aspnetcore-api-versioning/)
 - Opinionated usage of `Request` and `Response` headers. Optional to modify as needed. Includes usage of `Correlation` headers 
 - Usage of [High-performance logging in .NET](https://docs.microsoft.com/en-us/dotnet/core/extensions/high-performance-logging) 
 - Uses [Fluent validation](https://fluentvalidation.net/), instead of ASP.NET framework model validation
@@ -28,7 +29,7 @@ This is an opinionated ASP.NET Web API template for the dotnet new command. This
     dotnet new -i PivotalServices.WebApiTemplate.CSharp2
     ```
 
-1. This should install a template with the shortname `pvtlwebapiadv`
+1. This should install a template with the shortname `pvtlwebapi2`
 
     ```
     Templates                                         Short Name         Language          Tags
