@@ -33,6 +33,8 @@ This is an opinionated ASP.NET Web API template for the dotnet new command. This
 
 - Usage of a global versioniong of all nuget dependencies across the projects.
 
+- [ASP.NET Health checks](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-6.0), a sample implementation included.
+
 - [Steeltoe Application Configuration](https://docs.steeltoe.io/api/v3/configuration/index.html) is used for auto wiring of `configurations/secrets` from [Kubernetes](https://kubernetes.io/) and [Cloud Foundry](https://www.cloudfoundry.org/)
 
 - [Docker](https://www.docker.com/) ready.

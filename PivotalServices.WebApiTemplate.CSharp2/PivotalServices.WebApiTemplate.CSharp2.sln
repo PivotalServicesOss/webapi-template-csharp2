@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotalServices.WebApiTempl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotalServices.WebApiTemplate.CSharp2.Modules.UnitTests", "src\PivotalServices.WebApiTemplate.CSharp2.Modules.UnitTests\PivotalServices.WebApiTemplate.CSharp2.Modules.UnitTests.csproj", "{FE6ED0B0-515E-481D-BF0D-1049146B4CA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotalServices.WebApiTemplate.CSharp2.Application", "src\PivotalServices.WebApiTemplate.CSharp2.Application\PivotalServices.WebApiTemplate.CSharp2.Application.csproj", "{DE017ECE-F4FB-4674-B90F-8008AFB33924}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{FE6ED0B0-515E-481D-BF0D-1049146B4CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE6ED0B0-515E-481D-BF0D-1049146B4CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE6ED0B0-515E-481D-BF0D-1049146B4CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE017ECE-F4FB-4674-B90F-8008AFB33924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE017ECE-F4FB-4674-B90F-8008AFB33924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE017ECE-F4FB-4674-B90F-8008AFB33924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE017ECE-F4FB-4674-B90F-8008AFB33924}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E9633C06-4031-4559-A299-F4D0302A56C2} = {33B7407E-C0F4-4029-A2B7-002E85F02D2C}
@@ -58,5 +64,6 @@ Global
 		{0842E6C0-935E-4F99-AE08-D71D3BD6474A} = {33B7407E-C0F4-4029-A2B7-002E85F02D2C}
 		{3BF890D5-6534-4B80-A525-8D0D4E279573} = {33B7407E-C0F4-4029-A2B7-002E85F02D2C}
 		{FE6ED0B0-515E-481D-BF0D-1049146B4CA5} = {33B7407E-C0F4-4029-A2B7-002E85F02D2C}
+		{DE017ECE-F4FB-4674-B90F-8008AFB33924} = {33B7407E-C0F4-4029-A2B7-002E85F02D2C}
 	EndGlobalSection
 EndGlobal
