@@ -82,7 +82,7 @@ _*All common scripts like build scripts, dockerfile, test run settings, etc. are
 
 1. Make sure you have the compatible .NET Core SDK versions installed
 
-    Package Version 1.0.0 -> [.NET Core SDK Version 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+    Package Version 1.0.2 -> [.NET Core SDK Version 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
 
 1. Goto the folder and run either `build.bat` or `./build.sh` for the initial build.
