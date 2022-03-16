@@ -89,7 +89,7 @@ task UnitTests {
         Write-Host "Executing tests on: $test_project"
         exec {
             $test_project_name = (Get-Item $test_project).Directory.Name.TrimEnd("UnitTests").TrimEnd(".")
-            & $dotnet_exe test /p:SkipAutoProps=true /p:Include="[$test_project_name]*" /p:CollectCoverage=true /p:CoverletOutput="$test_results_dir/$test_project_name/" /p:CoverletOutputFormat="cobertura" $test_project --no-restore --configuration $project_config --settings "$base_dir\.test-run-settings" -- xunit.parallelizeTestCollections=true
+            & $dotnet_exe test /p:SkipAutoProps=true /p:Include="[$test_project_name]*" /p:CollectCoverage=true /p:CoverletOutput="$test_results_dir/$test_project_name/" /p:CoverletOutputFormat="cobertura" $test_project --no-restore --configuration $project_config --settings "$base_dir\test-run-settings" -- xunit.parallelizeTestCollections=true
         }
     }
     Pop-Location

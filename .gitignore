@@ -35,7 +35,6 @@ x64/
 [Bb]uild[Ll]og.*
 publish-artifacts
 test-results
-.test-run-settings
 
 *_i.c
 *_p.c
