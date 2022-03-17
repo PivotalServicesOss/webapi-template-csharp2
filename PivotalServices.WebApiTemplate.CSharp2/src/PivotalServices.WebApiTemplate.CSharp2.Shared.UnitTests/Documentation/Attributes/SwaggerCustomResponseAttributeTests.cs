@@ -37,7 +37,7 @@ public class SwaggerCustomResponseAttributeTests
         var constraint = typeof(SwaggerCustomResponseAttribute)
             .Should()
             .BeDecoratedWith<AttributeUsageAttribute>(a => a.Inherited == true && a.AllowMultiple == true 
-                            && a.ValidOn == (AttributeTargets.Class | AttributeTargets.Method), "missing required parameters");
+                            && a.ValidOn == (AttributeTargets.Class | AttributeTargets.Method), "required parameters");
     }
 
     internal class FakeResponseType

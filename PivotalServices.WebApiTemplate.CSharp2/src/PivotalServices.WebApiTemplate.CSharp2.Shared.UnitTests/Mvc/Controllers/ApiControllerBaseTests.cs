@@ -2,7 +2,7 @@
 public class ApiControllerBaseTests
 {
     [Fact]
-    public void ApplicationTokenController_Should_Inherit_ApiControllerBase()
+    public void ApiControllerBase_Should_Inherit_ApiControllerBase()
     {
         typeof(ApiControllerBase).Should().BeAssignableTo<ControllerBase>();
     }
@@ -44,7 +44,7 @@ public class ApiControllerBaseTests
             typeof(ApiControllerBase).Should()
                     .BeDecoratedWith<SwaggerCustomResponseAttribute>(p =>
                         p.StatusCode.Equals(code) && p.Type.IsAssignableTo(typeof(StandardErrorResponse)), 
-                        $"missing SwaggerCustomResponseAttribute(statusCode: {code}, type: typeof(StandardErrorResponse))");
+                        $"required SwaggerCustomResponseAttribute(statusCode: {code}, type: typeof(StandardErrorResponse))");
         }
     }
 }

@@ -10,7 +10,6 @@ properties {
   $release_id = "linux-x64"
   $app_publish_dir = "$base_dir\publish-artifacts\app\$release_id"
   $test_results_dir = "$base_dir\test-results"
-  $test_coverage_threshold=80
 }
 #These are aliases for other build tasks. They typically are named after the camelcase letters (rd = Rebuild Databases)
 task default -depends DevBuild

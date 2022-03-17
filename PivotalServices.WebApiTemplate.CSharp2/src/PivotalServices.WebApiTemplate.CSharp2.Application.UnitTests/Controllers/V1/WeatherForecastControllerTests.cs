@@ -30,9 +30,9 @@ public class WeatherForecastControllerTests
                     typeof(CancellationToken)
                 });
 
-        constraint.Which.Should().BeDecoratedWith<HttpGetAttribute>(r => r.Template == "GetAll", "missing HttpGet with GetAll route");
+        constraint.Which.Should().BeDecoratedWith<HttpGetAttribute>(r => r.Template == "GetAll", "required HttpGet with GetAll route");
 
-        constraint.Which.Should().BeDecoratedWith<SwaggerOperationAttribute>(s => s.Summary == "Gets weather forecast for all locations", "missing SwaggerOperationAttribute");
+        constraint.Which.Should().BeDecoratedWith<SwaggerOperationAttribute>(s => s.Summary == "Gets weather forecast for all locations", "required SwaggerOperationAttribute");
 
         foreach (var code in new[] { 200 })
         {
@@ -40,7 +40,7 @@ public class WeatherForecastControllerTests
                     p.StatusCode.Equals(code)
                     && p.Type.IsAssignableTo(typeof(GetWeatherForecastResponse))
                     && p.HeaderType.IsAssignableTo(typeof(StandardResponseHeader))
-                    && p.ContentTypes.Contains(MediaTypeNames.Application.Json), $"missing SwaggerCustomResponseAttribute");
+                    && p.ContentTypes.Contains(MediaTypeNames.Application.Json), $"required SwaggerCustomResponseAttribute");
         }
     }
 
@@ -92,9 +92,9 @@ public class WeatherForecastControllerTests
                     typeof(CancellationToken)
                 });
 
-        constraint.Which.Should().BeDecoratedWith<HttpGetAttribute>(r => r.Template == "GetByZipCode", "missing HttpGet with GetByZipCode route");
+        constraint.Which.Should().BeDecoratedWith<HttpGetAttribute>(r => r.Template == "GetByZipCode", "required HttpGet with GetByZipCode route");
 
-        constraint.Which.Should().BeDecoratedWith<SwaggerOperationAttribute>(s => s.Summary == "Gets weather forecast for given zipcode", "missing SwaggerOperationAttribute");
+        constraint.Which.Should().BeDecoratedWith<SwaggerOperationAttribute>(s => s.Summary == "Gets weather forecast for given zipcode", "required SwaggerOperationAttribute");
 
         foreach (var code in new[] { 200 })
         {
@@ -102,7 +102,7 @@ public class WeatherForecastControllerTests
                     p.StatusCode.Equals(code)
                     && p.Type.IsAssignableTo(typeof(GetWeatherForecastByZipCodeResponse))
                     && p.HeaderType.IsAssignableTo(typeof(StandardResponseHeader))
-                    && p.ContentTypes.Contains(MediaTypeNames.Application.Json), $"missing SwaggerCustomResponseAttribute");
+                    && p.ContentTypes.Contains(MediaTypeNames.Application.Json), $"required SwaggerCustomResponseAttribute");
         }
     }
 

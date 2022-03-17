@@ -53,25 +53,25 @@ public class GetWeatherForecastTests
 
         var propertyName = "Date";
         typeUnderTest.GetProperty(propertyName).Should().BeDecoratedWith<SwaggerSchemaAttribute>(s => 
-                        s.Description == "Date of forecast", $"{propertyName} missing required documentation");
+                        s.Description == "Date of forecast", $"{propertyName} required documentation");
 
         typeUnderTest.GetProperty(propertyName).Should().BeDecoratedWith<SwaggerSchemaExampleAttribute>(s => 
-                        s.Value == "02-09-2022", $" {propertyName} missing example");
+                        s.Value == "02-09-2022", $" {propertyName} required example");
 
         propertyName = "TemperatureC";
         typeUnderTest.GetProperty(propertyName).Should().BeDecoratedWith<SwaggerSchemaAttribute>(s => 
-                        s.Description == "Temperature in Celcius", $"{propertyName} missing required documentation");
+                        s.Description == "Temperature in Celcius", $"{propertyName} required documentation");
         
         propertyName = "TemperatureF";
         typeUnderTest.GetProperty(propertyName).Should().BeDecoratedWith<SwaggerSchemaAttribute>(s => 
-                        s.Description == "Temperature in Farenhit", $"{propertyName} missing required documentation");
+                        s.Description == "Temperature in Farenhit", $"{propertyName} required documentation");
         
         propertyName = "Summary";
         typeUnderTest.GetProperty(propertyName).Should().BeDecoratedWith<SwaggerSchemaAttribute>(s => 
-                        s.Description == "Summary of the weather forecast", $"{propertyName} missing required documentation");
+                        s.Description == "Summary of the weather forecast", $"{propertyName} required documentation");
         
         propertyName = "ZipCode";
         typeUnderTest.GetProperty(propertyName).Should().BeDecoratedWith<SwaggerSchemaAttribute>(s => 
-                        s.Description == "5 digit zipcode", $"{propertyName} missing required documentation");
+                        s.Description == "5 digit zipcode", $"{propertyName} required documentation");
     }
 }
