@@ -11,7 +11,6 @@ using Steeltoe.Common;
 using Steeltoe.Extensions.Configuration.CloudFoundry;
 using Serilog;
 using Serilog.Events;
-using Serilog.Formatting.Compact;
 
 [ExcludeFromCodeCoverage]
 public partial class Program
@@ -72,19 +71,24 @@ public partial class Program
 
         static void ConfigureAppConfiguration(string[] args, WebApplicationBuilder builder)
         {
+            // Reference: https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-6.0&tabs=linux
             builder.Configuration.AddUserSecrets<Program>(optional: true);
             builder.Configuration.AddEnvironmentVariables();
             builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: false);
             builder.Configuration.AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: false);
 
+            // Reference: https://github.com/SteeltoeOSS/Samples/tree/main/Configuration/src/Kubernetes
             if (Platform.IsKubernetes)
                 builder.Configuration.AddKubernetes();
 
+            // Reference: https://github.com/SteeltoeOSS/Samples/tree/main/Configuration/src/CloudFoundry
             if (Platform.IsCloudFoundry)
                 builder.Configuration.AddCloudFoundry();
 
             builder.Configuration.AddEnvironmentVariables();
             builder.Configuration.AddCommandLine(args);
+
+            // Reference: https://github.com/SteeltoeOSS/Samples/tree/main/Configuration/src/Placeholder
             ((IConfigurationBuilder)builder.Configuration).AddPlaceholderResolver();
         }
 

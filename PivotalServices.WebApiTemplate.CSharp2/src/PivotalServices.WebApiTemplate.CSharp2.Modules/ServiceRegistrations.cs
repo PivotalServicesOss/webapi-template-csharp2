@@ -1,8 +1,4 @@
-using System.Diagnostics.CodeAnalysis;
-using System.Reflection;
 using Autofac;
-using FluentValidation;
-using MediatR;
 
 namespace PivotalServices.WebApiTemplate.CSharp2.Modules;
 
