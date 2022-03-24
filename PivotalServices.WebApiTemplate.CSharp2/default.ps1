@@ -10,6 +10,7 @@ properties {
   $release_id = "linux-x64"
   $app_publish_dir = "$base_dir\publish-artifacts\app\$release_id"
   $test_results_dir = "$base_dir\test-results"
+  $test_coverage_threshold = 85
 }
 #These are aliases for other build tasks. They typically are named after the camelcase letters (rd = Rebuild Databases)
 task default -depends DevBuild
@@ -76,7 +77,7 @@ task Compile {
 }
 
 task UnitTests {
-    Write-Host "******************* Now running unit tests, generating code coverage results*********************"  -ForegroundColor Green
+    Write-Host "******************* Now running unit tests, generating and assessing code coverage results*********************"  -ForegroundColor Green
     if (Test-Path $test_results_dir) {
         delete_directory $test_results_dir
     }
@@ -88,7 +89,7 @@ task UnitTests {
         Write-Host "Executing tests on: $test_project"
         exec {
             $test_project_name = (Get-Item $test_project).Directory.Name.TrimEnd("UnitTests").TrimEnd(".")
-            & $dotnet_exe test /p:SkipAutoProps=true /p:Include="[$test_project_name]*" /p:CollectCoverage=true /p:CoverletOutput="$test_results_dir/$test_project_name/" /p:CoverletOutputFormat="cobertura" $test_project --no-restore --configuration $project_config --settings "$base_dir\test-run-settings" -- xunit.parallelizeTestCollections=true
+            & $dotnet_exe test /p:threshold=$test_coverage_threshold /p:ThresholdType=line /p:SkipAutoProps=true /p:Include="[$test_project_name]*" /p:CollectCoverage=true /p:CoverletOutput="$test_results_dir/$test_project_name/" /p:CoverletOutputFormat="cobertura" $test_project --no-restore --configuration $project_config --settings "$base_dir\test-run-settings" -- xunit.parallelizeTestCollections=true
         }
     }
     Pop-Location
@@ -109,10 +110,19 @@ task UnitTests {
     Pop-Location
  }
 
- task Publish -depends Restore {
+task Publish -depends Restore {
     Write-Host "******************* Now publishing the application to $app_publish_dir *********************"  -ForegroundColor Green
     exec {
-        & $dotnet_exe msbuild /t:publish /v:m /p:Platform=$platform /p:RuntimeIdentifier=$release_id /p:PublishDir=$app_publish_dir /p:Configuration=$project_config /nologo /nologo $app_project_file
+        & $dotnet_exe msbuild /t:publish /v:m /p:Platform=$platform /p:TargetFrameworks=$target_frameworks /p:RuntimeIdentifier=$release_id /p:PublishDir=$app_publish_dir /p:Configuration=$project_config /nologo $app_project_file
+    }
+}
+
+task DockerUp {
+    Write-Host "******************* Now re-building docker image and running it *********************"  -ForegroundColor Green
+    exec {
+        & docker compose down
+        & docker compose build
+        & docker compose up -d
     }
 }
 

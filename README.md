@@ -11,7 +11,7 @@ This is an opinionated ASP.NET Web API template for the dotnet new command. This
 
 - [MediatR](https://github.com/jbogard/MediatR), a simple mediator implementation for .NET. I love the usage of this tool which reduces tight coupling between code components.
 
-- A simple [Modular Monolith](https://modularmonolith.net/) to start with. Eventually can easily seperate it as needed, but please refer the article [Should that be a Microservice?](https://tanzu.vmware.com/content/blog/should-that-be-a-microservice-keep-these-six-factors-in-mind).
+- A simple [Modular Style Built WebApi](https://modularmonolith.net/) to start with. Eventually can easily seperate it as needed, but please refer the article [Should that be a Microservice?](https://tanzu.vmware.com/content/blog/should-that-be-a-microservice-keep-these-six-factors-in-mind).
 
 - [Autofac](https://autofac.org/) is used in addition to .NET framework  provided [ServiceCollection](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.servicecollection?view=dotnet-plat-ext-6.0) as `Inversion of Control container`
 
@@ -35,7 +35,7 @@ This is an opinionated ASP.NET Web API template for the dotnet new command. This
 
 - [ASP.NET Health checks](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-6.0), a sample implementation included.
 
-- [Steeltoe Application Configuration](https://docs.steeltoe.io/api/v3/configuration/index.html) is used for auto wiring of `configurations/secrets` from [Kubernetes](https://kubernetes.io/) and [Cloud Foundry](https://www.cloudfoundry.org/)
+- [Steeltoe Application Configuration](https://docs.steeltoe.io/api/v3/configuration/index.html) is used for auto wiring of `configurations/secrets` from [Kubernetes](https://kubernetes.io/) and [Cloud Foundry](https://www.cloudfoundry.org/). To make use of it, learn more from the reference links given in `Program.cs`
 
 - [Docker](https://www.docker.com/) ready.
 
@@ -89,7 +89,7 @@ _*All common scripts like build scripts, dockerfile, test run settings, etc. are
 
 1. Goto the folder and run either `build.bat` or `./build.sh` for the initial build.
 
-1. If docker is available and to run the application in docker, run `docker compose up` or `docker-compose up`
+1. If docker is available and to run the application in docker, run `docker compose up` or `docker-compose up` or `.\build.bat dockerup` or `../build.sh dockerup`
 
 > If you have any queries, please raise an issue [here](https://github.com/alfusinigoj/pivotal-webapi-template-csharp2/issues)
 

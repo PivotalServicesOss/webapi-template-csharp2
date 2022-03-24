@@ -63,9 +63,9 @@ public class DocumentationTests
     {
         var typeUnderTest = typeof(StandardResponseHeader);
 
-        var propertyName = "ResponseId";
+        var propertyName = "CorrelationId";
         typeUnderTest.GetProperty(propertyName).Should().BeDecoratedWith<SwaggerSchemaAttribute>(s => 
-                        s.Description == "Unique GUID generated while responding to a request", $"{propertyName} required documentation");
+                        s.Description == "CorrelationId header from the current request", $"{propertyName} missing required documentation");
 
         propertyName = "ResponseDateTimeUtc";
         typeUnderTest.GetProperty(propertyName).Should().BeDecoratedWith<SwaggerSchemaAttribute>(s => 

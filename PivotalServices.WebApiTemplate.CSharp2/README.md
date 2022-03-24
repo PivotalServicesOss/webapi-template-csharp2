@@ -9,7 +9,7 @@
 
 1. Goto the folder and run either `.\build.bat` or `./build.sh` for the initial build.
 
-1. If docker is available and to run the application in docker, run `docker compose up` or `docker-compose up`
+1. If docker is available and to run the application in docker, run `docker compose up` or `docker-compose up` or `.\build.bat dockerup` or `../build.sh dockerup`
 
 
 ## Code Structure

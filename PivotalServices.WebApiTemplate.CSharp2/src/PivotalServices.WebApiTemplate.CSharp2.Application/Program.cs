@@ -78,12 +78,12 @@ public partial class Program
             builder.Configuration.AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: false);
 
             // Reference: https://github.com/SteeltoeOSS/Samples/tree/main/Configuration/src/Kubernetes
-            if (Platform.IsKubernetes)
-                builder.Configuration.AddKubernetes();
+            // if (Platform.IsKubernetes)
+            //     builder.Configuration.AddKubernetes();
 
             // Reference: https://github.com/SteeltoeOSS/Samples/tree/main/Configuration/src/CloudFoundry
-            if (Platform.IsCloudFoundry)
-                builder.Configuration.AddCloudFoundry();
+            // if (Platform.IsCloudFoundry)
+            //     builder.Configuration.AddCloudFoundry();
 
             builder.Configuration.AddEnvironmentVariables();
             builder.Configuration.AddCommandLine(args);

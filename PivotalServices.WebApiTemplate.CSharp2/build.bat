@@ -1,8 +1,7 @@
 @echo Executing build with default.ps1 configuration
+@echo off
 
-@echo on
-
-powershell.exe -NoProfile -NonInteractive -ExecutionPolicy bypass -Command "& { .\execute-psake-build.ps1 %1; exit $LASTEXITCODE }"
+powershell.exe -NoProfile -ExecutionPolicy bypass -Command "& {.\configure-build.ps1; invoke-psake .\default.ps1 %1 -parameters @{"solution_name"="'PivotalServices.WebApiTemplate.CSharp2'";}}"
 
 EXIT /B %ERRORLEVEL%
 
