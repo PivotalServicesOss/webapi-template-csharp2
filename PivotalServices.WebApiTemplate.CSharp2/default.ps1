@@ -8,6 +8,7 @@ properties {
   $dotnet_exe = get-dotnet
 
   $release_id = "linux-x64"
+  $target_frameworks = "net6.0"
   $app_publish_dir = "$base_dir\publish-artifacts\app\$release_id"
   $test_results_dir = "$base_dir\test-results"
   $test_coverage_threshold = 85
@@ -110,9 +111,10 @@ task UnitTests {
     Pop-Location
  }
 
-task Publish -depends Restore {
+task Publish {
     Write-Host "******************* Now publishing the application to $app_publish_dir *********************"  -ForegroundColor Green
     exec {
+        & $dotnet_exe msbuild /t:restore $solution_file /v:m /p:NuGetInteractive="true" /p:RuntimeIdentifier=$release_id /p:TargetFrameworks=$target_frameworks
         & $dotnet_exe msbuild /t:publish /v:m /p:Platform=$platform /p:TargetFrameworks=$target_frameworks /p:RuntimeIdentifier=$release_id /p:PublishDir=$app_publish_dir /p:Configuration=$project_config /nologo $app_project_file
     }
 }

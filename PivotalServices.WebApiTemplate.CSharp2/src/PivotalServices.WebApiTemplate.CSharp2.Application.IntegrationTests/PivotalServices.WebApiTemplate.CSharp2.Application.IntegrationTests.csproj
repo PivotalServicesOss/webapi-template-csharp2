@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="appSettings.Integration.json" CopyToPublishDirectory="Always" CopyToOutputDirectory="Always" />
+    <None Include="appsettings.Integration.json" CopyToPublishDirectory="Always" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
 </Project>
